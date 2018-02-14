@@ -4,8 +4,6 @@
 [![Build Status](https://travis-ci.org/funnelcloudinc/ember-cli-echarts.svg)](https://travis-ci.org/funnelcloudinc/ember-cli-echarts)
 [![npm version](https://badge.fury.io/js/ember-cli-echarts.svg)](http://badge.fury.io/js/ember-cli-echarts)
 [![Download Total](https://img.shields.io/npm/dt/ember-cli-echarts.svg)](http://badge.fury.io/js/ember-cli-echarts)
-[![Ember Observer Score](https://emberobserver.com/badges/ember-cli-echarts.svg)](https://emberobserver.com/addons/ember-cli-echarts)
-[![Code Climate](https://codeclimate.com/github/funnelcloudinc/ember-cli-echarts/badges/gpa.svg)](https://codeclimate.com/github/funnelcloudinc/ember-cli-echarts)
 
 An EmberJS [echarts](http://echarts.baidu.com/) wrapper
 
