@@ -7,23 +7,20 @@ import echarts from 'echarts';
 export default Component.extend({
   classNames: ['echarts-chart'],
 
-  options: {},
+  option: {},
   notMerge: false,
   lazyUpdate: false,
   theme: null,
-  initOptions: {
-    devicePixelRatio: 1,
-    renderer: 'canvas',
-    width: 'auto',
-    height: 'auto'
-  },
+  onEvents: {},
+  onChartReady(){},
+  showLoading: false,
+  loadingOptions: {},
+  opts: {},
 
   _chart: null,
 
-  beforeSetup() {
-  },
-  afterSetup() {
-  },
+  beforeSetup() {},
+  afterSetup() {},
 
   init() {
     this._super(...arguments);
@@ -34,29 +31,45 @@ export default Component.extend({
     return get(this, 'targetObject') || this;
   }),
 
-  reDraw: on('didInsertElement', observer('options', 'options.{*}', function() {
-    run.scheduleOnce('render', this, this.drawChart);
+  reRender: on('didInsertElement', observer('option', 'option.{*}', 'opts', 'opts.{devicePixelRatio,renderer,width,height}', function() {
+    run.scheduleOnce('render', this, this.renderChart);
   })),
 
-  drawChart() {
-    if (get(this, '_chart') && get(this, '_chart').isDisposed()) {
-      return;
-    }
+  renderChart() {
+    if (get(this, '_chart') && get(this, '_chart').isDisposed()) return;
 
-    let chart;
-    let selector = `#${get(this, 'elementId')}`;
-    let $el = $(selector);
-    let context = get(this, 'eventContext');
+    const selector = `#${get(this, 'elementId')}`;
+    const $el = $(selector);
+    const context = get(this, 'eventContext');
+    const notMerge = get(this, 'notMerge');
+    const lazyUpdate = get(this, 'lazyUpdate');
+    const option = get(this, 'option');
+    const theme = get(this, 'theme');
+    const opts = get(this, 'opts');
+    const onChartReady = get(this, 'onChartReady');
+    const showLoading = get(this, 'showLoading');
+    const loadingOptions = get(this, 'loadingOptions');
+    const beforeSetup = get(this, 'beforeSetup');
+    const afterSetup = get(this, 'afterSetup');
 
-    chart = echarts.init($el[0], get(this, 'theme'), get(this, 'initOptions'));
-
+    const chart = echarts.init($el[0], theme, opts);
     set(this, '_chart', chart);
 
-    run(() => get(this, 'beforeSetup').call(context, chart));
+    // before echarts setup
+    run(() => beforeSetup.call(context, chart));
 
-    chart.setOption(get(this, 'options'), get(this, 'notMerge'), get(this, 'lazyUpdate'));
+    chart.setOption(option, notMerge, lazyUpdate);
 
-    run(() => get(this, 'afterSetup').call(context, chart));
+    // set loading mask
+    if (showLoading) chart.showLoading(loadingOptions || null);
+    else chart.hideLoading();
+
+    this.bindEvents(chart);
+
+    if (typeof onChartReady === 'function') onChartReady(chart);
+
+    // after echarts setup
+    run(() => afterSetup.call(context, chart));
 
     return chart;
   },
@@ -75,6 +88,26 @@ export default Component.extend({
       chart.dispose();
     }
     $(window).off('resize');
+  },
+
+  bindEvents(instance) {
+    const events = get(this, 'onEvents') || {};
+    const _loopEvent = (eventName) => {
+      // ignore the event config which not satisfy
+      if (typeof eventName === 'string' && typeof events[eventName] === 'function') {
+        // binding event
+        instance.off(eventName);
+        instance.on(eventName, (param) => {
+          events[eventName](param, instance);
+        });
+      }
+    };
+
+    for (const eventName in events) {
+      if (Object.prototype.hasOwnProperty.call(events, eventName)) {
+        _loopEvent(eventName);
+      }
+    }
   }
 
 });

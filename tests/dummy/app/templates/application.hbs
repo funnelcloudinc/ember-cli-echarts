@@ -8,8 +8,13 @@
 </style>
 
 <hr>
-{{echarts-chart options=options}}
-<hr>
+{{echarts-chart
+  option=option
+  onEvents=onEvents
+  onChartReady=(action onChartReady)
+  beforeSetup=(action beforeSetup)
+  afterSetup=(action afterSetup)
+}}
 
 
 {{outlet}}

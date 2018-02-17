@@ -1,17 +1,38 @@
 import Controller from '@ember/controller';
 
 export default Controller.extend({
-  options: {
-    xAxis: {
-      type: 'category',
-      data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+
+  init() {
+    this._super(...arguments);
+    setInterval(() => {
+      this.set('option', {
+        xAxis: {
+          type: 'category',
+          data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+        },
+        yAxis: {
+          type: 'value'
+        },
+        series: [{
+          data: [Math.floor(Math.random() * 1500), Math.floor(Math.random() * 1500), Math.floor(Math.random() * 1500), Math.floor(Math.random() * 1500), Math.floor(Math.random() * 1500), Math.floor(Math.random() * 1500), 1320],
+          type: 'line'
+        }]
+      })
+    }, 3000);
+  },
+
+  onEvents: {
+    click(params, echart) {
+      console.log('onClick', params, echart);
     },
-    yAxis: {
-      type: 'value'
-    },
-    series: [{
-      data: [820, 932, 901, 934, 1290, 1330, 1320],
-      type: 'line'
-    }]
+  },
+  onChartReady(chart) {
+    chart.hideLoading();
+  },
+  beforeSetup() {
+    // console.log('Before Setup');
+  },
+  afterSetup() {
+    // console.log('After Setup');
   }
 });
