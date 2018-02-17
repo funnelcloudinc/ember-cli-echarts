@@ -66,7 +66,7 @@ beforeSetup(context, chart) {}
 ```
 
 ```handlebars
-{{echarts-chart options=options beforeSetup=beforeSetup}}
+{{echarts-chart options=options beforeSetup=(action beforeSetup)}}
 ```
 
 #### 2. afterSetup
