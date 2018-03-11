@@ -1,0 +1,1 @@
+{"jsonapi":{"version":"1.0"},"data":{"type":"project","id":"ember-cli-echarts","attributes":{"name":"ember-cli-echarts","version":"0.1.0","navigationIndex":{}},"relationships":{"modules":{"data":[]}}}}

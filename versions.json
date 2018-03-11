@@ -10,5 +10,17 @@
     "tag": null,
     "path": "add-documentation",
     "name": "add-documentation"
+  },
+  "release-0.1.0": {
+    "sha": "8c25ecb5eddd81c15dfff1dc4fffbd7d5e8786c9",
+    "tag": "release-0.1.0",
+    "path": "release-0.1.0",
+    "name": "release-0.1.0"
+  },
+  "latest": {
+    "sha": "8c25ecb5eddd81c15dfff1dc4fffbd7d5e8786c9",
+    "tag": "release-0.1.0",
+    "path": "latest",
+    "name": "latest"
   }
 }
