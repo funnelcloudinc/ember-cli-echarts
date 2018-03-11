@@ -10,8 +10,11 @@
 {{docs/examples/chart-events/demo}}
 
 ## Themes
+
 ### Custom theme
+
 {{docs/examples/chart-themes/demo1}}
+
 ### echart dark theme
 {{docs/examples/chart-themes/demo2}}
 

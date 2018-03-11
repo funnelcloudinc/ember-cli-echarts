@@ -37,7 +37,7 @@ option = {
 ```
 
 ```handlebars
-{{echarts-chart options=options}}
+{{echarts-chart option=option}}
 ```
 
 ### Helper Actions
@@ -51,7 +51,7 @@ beforeSetup(context, chart) {}
 ```
 
 ```handlebars
-{{echarts-chart options=options beforeSetup=(action beforeSetup)}}
+{{echarts-chart option=option beforeSetup=(action beforeSetup)}}
 ```
 
 #### 2. afterSetup
@@ -60,27 +60,3 @@ This is called after all chart options and data have been set, as well as after 
 ```javascript
 afterSetup(context, chart) {}
 ```
-
-# Want to help?
-
-## Installation
-
-* `git clone` this repository
-* `npm install`
-* `bower install`
-
-## Running
-
-* `ember server`
-* Visit your app at http://localhost:4200.
-
-## Running Tests
-
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).

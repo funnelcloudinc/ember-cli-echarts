@@ -1,5 +1,12 @@
 {{#docs-demo as |demo|}}
   {{#demo.example name='chart-events.hbs'}}
+    <style>
+      .echarts-chart {
+        width: 100%;
+        height: 500px;
+      }
+    </style>
+
     {{echarts-chart
       option=option
       onEvents=onEvents
@@ -9,12 +16,3 @@
   {{demo.snippet 'chart-events.hbs'}}
   {{demo.snippet 'chart-events.js' label='component.js'}}
 {{/docs-demo}}
-
-
-
-<style>
-  .echarts-chart {
-    width: 100%;
-    height: 500px;
-  }
-</style>

@@ -8,11 +8,10 @@ const Router = EmberRouter.extend(RouterScroll, {
 });
 
 Router.map(function() {
-
   this.route('docs', function() {
+    this.route('index');
     this.route('usage');
     this.route('quickstart');
-
     this.route('examples', function() {
       this.route('chart-simple');
       this.route('chart-loading');
@@ -21,13 +20,6 @@ Router.map(function() {
       this.route('chart-dynamic');
       this.route('chart-graph');
       this.route('chart-calendar');
-    });
-
-  });
-
-  this.route('sandbox', function() {
-    this.route('api', function() {
-      this.route('item', { path: '/*path' });
     });
   });
 

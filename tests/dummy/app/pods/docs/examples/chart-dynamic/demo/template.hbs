@@ -1,5 +1,12 @@
 {{#docs-demo as |demo|}}
   {{#demo.example name='chart-dynamic.hbs'}}
+    <style>
+      .echarts-chart {
+        width: 100%;
+        height: 500px;
+      }
+    </style>
+
     {{echarts-chart
       option=option
     }}
@@ -8,12 +15,3 @@
   {{demo.snippet 'chart-dynamic.hbs'}}
   {{demo.snippet 'chart-dynamic.js' label='component.js'}}
 {{/docs-demo}}
-
-
-
-<style>
-  .echarts-chart {
-    width: 100%;
-    height: 500px;
-  }
-</style>

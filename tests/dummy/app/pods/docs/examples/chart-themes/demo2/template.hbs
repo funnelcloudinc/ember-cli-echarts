@@ -1,5 +1,12 @@
 {{#docs-demo as |demo|}}
   {{#demo.example name='chart-themes-2.hbs'}}
+    <style>
+      .echarts-chart {
+        width: 100%;
+        height: 500px;
+      }
+    </style>
+
     {{echarts-chart
       option=option
       theme=theme
@@ -9,12 +16,3 @@
   {{demo.snippet 'chart-themes-2.hbs'}}
   {{demo.snippet 'chart-themes-2.js' label='component.js'}}
 {{/docs-demo}}
-
-
-
-<style>
-  .echarts-chart {
-    width: 100%;
-    height: 500px;
-  }
-</style>
