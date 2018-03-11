@@ -1,0 +1,18 @@
+{{#docs-demo as |demo|}}
+  {{#demo.example name='chart-themes-1.hbs'}}
+    {{echarts-chart
+      option=option
+      theme=theme
+    }}
+  {{/demo.example}}
+
+  {{demo.snippet 'chart-themes-1.hbs'}}
+  {{demo.snippet 'chart-themes-1.js' label='component.js'}}
+{{/docs-demo}}
+
+<style>
+  .echarts-chart {
+    width: 100%;
+    height: 500px;
+  }
+</style>
