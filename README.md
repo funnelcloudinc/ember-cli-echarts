@@ -5,17 +5,12 @@
 [![npm version](https://badge.fury.io/js/ember-cli-echarts.svg)](http://badge.fury.io/js/ember-cli-echarts)
 [![Download Total](https://img.shields.io/npm/dt/ember-cli-echarts.svg)](http://badge.fury.io/js/ember-cli-echarts)
 
-An EmberJS [echarts](http://echarts.baidu.com/) wrapper
-
-### Shout-out to @offirgolan as a lot of this was stolen from: [ember-cli-nvd3](https://github.com/offirgolan/ember-cli-nvd3) :pizza: :pizza: :pizza:  
+An EmberJS [echarts](http://echarts.baidu.com/) wrapper  
 
 ## Installation ##
 ```shell
 ember install ember-cli-echarts
 ```
-
-## Looking for help? ##
-If it is a bug [please open an issue on GitHub](http://github.com/funnelcloudinc/ember-cli-echarts/issues).
 
 ## echarts Documentation
 Before using this addon, you might want to checkout the [echarts Docs](https://ecomfe.github.io/echarts-doc/public/en/api.html#echarts)
@@ -30,7 +25,7 @@ All you need to get started is to specify which type of chart you want and the d
 ## Options
 
 ### Chart Options
-All chart specific options can be specified via the `options` property.
+All chart specific options can be specified via the `option` property.
 
 ```javascript
 // Basic area chart
@@ -52,7 +47,7 @@ option = {
 ```
 
 ```handlebars
-{{echarts-chart options=options}}
+{{echarts-chart option=option}}
 ```
 
 ### Helper Actions
@@ -75,6 +70,9 @@ This is called after all chart options and data have been set, as well as after 
 ```javascript
 afterSetup(context, chart) {}
 ```
+
+## Looking for help? ##
+If it is a bug [please open an issue on GitHub](http://github.com/funnelcloudinc/ember-cli-echarts/issues).
 
 # Want to help?
 
@@ -99,3 +97,5 @@ afterSetup(context, chart) {}
 * `ember build`
 
 For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+
+### Shout-out to @offirgolan as a lot of this was stolen from: [ember-cli-nvd3](https://github.com/offirgolan/ember-cli-nvd3) :pizza: :pizza: :pizza:

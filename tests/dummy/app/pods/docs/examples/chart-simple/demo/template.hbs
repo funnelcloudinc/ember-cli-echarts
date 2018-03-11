@@ -1,0 +1,21 @@
+{{#docs-demo as |demo|}}
+  {{#demo.example name='chart-simple.hbs'}}
+    <style>
+      .echarts-chart {
+        width: 100%;
+        height: 500px;
+      }
+    </style>
+
+    {{echarts-chart
+      option=option
+      onEvents=onEvents
+      onChartReady=(action onChartReady)
+      beforeSetup=(action beforeSetup)
+      afterSetup=(action afterSetup)
+    }}
+  {{/demo.example}}
+
+  {{demo.snippet 'chart-simple.hbs'}}
+  {{demo.snippet 'chart-simple.js' label='component.js'}}
+{{/docs-demo}}

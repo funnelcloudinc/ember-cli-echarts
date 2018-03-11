@@ -12,7 +12,7 @@ export default Component.extend({
   lazyUpdate: false,
   theme: null,
   onEvents: {},
-  onChartReady(){},
+  onChartReady() {},
   showLoading: false,
   loadingOptions: {},
   opts: {},
@@ -31,9 +31,13 @@ export default Component.extend({
     return get(this, 'targetObject') || this;
   }),
 
-  reRender: on('didInsertElement', observer('option', 'option.{*}', 'opts', 'opts.{devicePixelRatio,renderer,width,height}', function() {
-    run.scheduleOnce('render', this, this.renderChart);
-  })),
+  reRender: on('didInsertElement', observer(
+    'option',
+    'opts',
+    'opts.{devicePixelRatio,renderer,width,height}',
+    function() {
+      run.scheduleOnce('render', this, this.renderChart);
+    })),
 
   renderChart() {
     if (get(this, '_chart') && get(this, '_chart').isDisposed()) return;

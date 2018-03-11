@@ -1,0 +1,22 @@
+{{!-- BEGIN-SNIPPET docs-viewer.hbs --}}
+{{#docs-viewer as |viewer|}}
+  {{#viewer.nav as |nav|}}
+    {{nav.item 'Usage' 'docs.usage'}}
+    {{nav.item 'Examples' 'docs.examples'}}
+    {{#nav.subnav as |nav|}}
+      {{nav.item 'Simple' 'docs.examples.chart-simple'}}
+      {{nav.item 'Loading' 'docs.examples.chart-loading'}}
+      {{nav.item 'Events' 'docs.examples.chart-events'}}
+      {{nav.item 'Themes' 'docs.examples.chart-themes'}}
+      {{nav.item 'Dynamic' 'docs.examples.chart-dynamic'}}
+      {{nav.item 'Graph' 'docs.examples.chart-graph'}}
+      {{nav.item 'Calendar' 'docs.examples.chart-calendar'}}
+    {{/nav.subnav}}
+  {{/viewer.nav}}
+
+  {{#viewer.main}}
+    {{outlet}}
+  {{/viewer.main}}
+
+{{/docs-viewer}}
+{{!-- END-SNIPPET --}}
