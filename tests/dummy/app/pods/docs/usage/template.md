@@ -6,7 +6,7 @@ ember install ember-cli-echarts
 ```
 
 ## Basic Usage ##
-All you need to get started is to pass in the data it should display via the `option` parameter
+All you need to get started is to pass in the data it should display via the `option` parameter.
 
 ```handlebars
 {{echarts-chart option=option}}
@@ -41,7 +41,7 @@ option = {
 ```
 
 ### Events
-[echarts events API](https://ecomfe.github.io/echarts-doc/public/en/api.html#events)
+[Echarts events API](https://ecomfe.github.io/echarts-doc/public/en/api.html#events)
 
 ```javascript
 onEvents: {
@@ -62,7 +62,7 @@ onEvents: {
 
 ### Loading
 
-[echarts showLoading API](https://ecomfe.github.io/echarts-doc/public/en/api.html#echartsInstance.showLoading)
+[Echarts showLoading API](https://ecomfe.github.io/echarts-doc/public/en/api.html#echartsInstance.showLoading)
 
 ```javascript
 _t: null,
@@ -93,7 +93,7 @@ onChartReady(chart) {
 
 ### Themes
 
-Custom Theme
+Custom theme
 
 ```javascript
 init() {
@@ -127,7 +127,7 @@ registerTheme() {
 }
 ```
 
-Echarts Theme (Dark)
+Echarts `Dark` theme
 
 ```javascript
 init() {
@@ -146,7 +146,7 @@ init() {
 
 ### Additional Config
 
-[echarts init API](https://ecomfe.github.io/echarts-doc/public/en/api.html#echarts.init)
+[Echarts init API](https://ecomfe.github.io/echarts-doc/public/en/api.html#echarts.init)
 
 ```javascript
 opts: {

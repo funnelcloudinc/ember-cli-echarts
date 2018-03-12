@@ -1,5 +1,5 @@
 # Graph
 
-render a graph-webkit-dep.
+Render a webkit-dep graph
 
 {{docs/examples/chart-graph/demo}}

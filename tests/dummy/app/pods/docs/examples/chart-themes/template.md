@@ -4,6 +4,6 @@ Custom theme
 
 {{docs/examples/chart-themes/demo1}}
 
-Echart dark theme
+Echart `Dark` theme
 
 {{docs/examples/chart-themes/demo2}}
