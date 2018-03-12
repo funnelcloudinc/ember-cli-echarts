@@ -22,5 +22,11 @@
     "tag": "release-0.1.0",
     "path": "latest",
     "name": "latest"
+  },
+  "master": {
+    "sha": "2aacaf776c05f876255ba715f654959ad300c717",
+    "tag": null,
+    "path": "master",
+    "name": "master"
   }
 }
