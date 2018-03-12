@@ -13,19 +13,22 @@ ember install ember-cli-echarts
 ```
 
 ## echarts Documentation
-Before using this addon, you might want to checkout the [echarts Docs](https://ecomfe.github.io/echarts-doc/public/en/api.html#echarts)
+Before using this addon, you might want to checkout the [echarts docs](https://ecomfe.github.io/echarts-doc/public/en/api.html#echarts)
+
+[Usage](https://funnelcloudinc.github.io/ember-cli-echarts/latest/docs/usage) |
+[Examples](https://funnelcloudinc.github.io/ember-cli-echarts/latest/docs/examples)
 
 ## Basic Usage ##
-All you need to get started is to specify which type of chart you want and the data it should display
+All you need to get started is to pass in the data it should display via the `option` parameter
 
 ```handlebars
-{{echarts-chart options=options}}
+{{echarts-chart option=option}}
 ```
 
 ## Options
 
 ### Chart Options
-All chart specific options can be specified via the `option` property.
+All chart specific options can be specified via the `option` parameter.
 
 ```javascript
 // Basic area chart
@@ -48,27 +51,6 @@ option = {
 
 ```handlebars
 {{echarts-chart option=option}}
-```
-
-### Helper Actions
-Currently there are two helper actions provided:
-
-#### 1. beforeSetup
-This is called before echarts has been initialized. 
-
-```javascript
-beforeSetup(context, chart) {}
-```
-
-```handlebars
-{{echarts-chart options=options beforeSetup=(action beforeSetup)}}
-```
-
-#### 2. afterSetup
-This is called after all chart options and data have been set, as well as after the chart has been created. 
-
-```javascript
-afterSetup(context, chart) {}
 ```
 
 ## Looking for help? ##
@@ -98,4 +80,4 @@ If it is a bug [please open an issue on GitHub](http://github.com/funnelcloudinc
 
 For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
 
-### Shout-out to @offirgolan as a lot of this was stolen from: [ember-cli-nvd3](https://github.com/offirgolan/ember-cli-nvd3) :pizza: :pizza: :pizza:
+### Shout-out to @offirgolan as a lot of this was stolen from: [ember-cli-nvd3](https://github.com/offirgolan/ember-cli-nvd3) :pizza: :pizza:
