@@ -1,5 +1,5 @@
-# Evented Chart
+# Chart Events
 
-echarts events (Click the chart, and watch the console)
+Echart events (open the console and click the chart)
 
 {{docs/examples/chart-events/demo}}

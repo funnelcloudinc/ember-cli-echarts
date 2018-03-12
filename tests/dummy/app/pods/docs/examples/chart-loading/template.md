@@ -1,5 +1,5 @@
 # Loading
 
-Chart loading With `showLoading` : (when chart ready, hide the loading mask.)
+When the chart is ready hide the loading mask
 
 {{docs/examples/chart-loading/demo}}
