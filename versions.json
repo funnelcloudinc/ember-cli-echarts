@@ -28,5 +28,11 @@
     "tag": null,
     "path": "master",
     "name": "master"
+  },
+  "develop": {
+    "sha": "a89bf4e67d9642ae80af51daf6d1be88b5c5cdab",
+    "tag": null,
+    "path": "develop",
+    "name": "develop"
   }
 }
