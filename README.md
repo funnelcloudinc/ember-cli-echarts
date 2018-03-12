@@ -80,4 +80,4 @@ If it is a bug [please open an issue on GitHub](http://github.com/funnelcloudinc
 
 For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
 
-### Shout-out to @offirgolan as a lot of this was stolen from: [ember-cli-nvd3](https://github.com/offirgolan/ember-cli-nvd3) :pizza: :pizza:
+### Shout-out to @offirgolan as a lot of this was inspired by: [ember-cli-nvd3](https://github.com/offirgolan/ember-cli-nvd3) :pizza: :pizza:
