@@ -18,8 +18,8 @@
     "name": "release-0.1.0"
   },
   "latest": {
-    "sha": "e274359d00db703f320da60be2fed2e9377ec726",
-    "tag": "0.1.2",
+    "sha": "1b989ac0ff02ec1cb0402d3ff5ed37add4a1ddf7",
+    "tag": "0.1.3",
     "path": "latest",
     "name": "latest"
   },
@@ -46,5 +46,11 @@
     "tag": "0.1.2",
     "path": "0.1.2",
     "name": "0.1.2"
+  },
+  "0.1.3": {
+    "sha": "1b989ac0ff02ec1cb0402d3ff5ed37add4a1ddf7",
+    "tag": "0.1.3",
+    "path": "0.1.3",
+    "name": "0.1.3"
   }
 }
