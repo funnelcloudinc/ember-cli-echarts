@@ -222,6 +222,7 @@ afterSetup(context, chart) {}
 
 ```handlebars
 {{echarts-chart option=option afterSetup=(action afterSetup)}}
+```
 
 ## Looking for help? ##
 If it is a bug [please open an issue on GitHub](http://github.com/funnelcloudinc/ember-cli-echarts/issues).
