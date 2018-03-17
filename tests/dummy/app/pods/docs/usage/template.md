@@ -5,12 +5,16 @@ An EmberJS [echarts](http://echarts.baidu.com/) wrapper
 ember install ember-cli-echarts
 ```
 
+---
+
 ## Basic Usage ##
 All you need to get started is to pass in the data it should display via the `option` parameter.
 
 ```handlebars
 {{echarts-chart option=option}}
 ```
+
+---
 
 ## Options
 
@@ -40,6 +44,10 @@ option = {
 {{echarts-chart option=option}}
 ```
 
+[Example](https://funnelcloudinc.github.io/ember-cli-echarts/latest/docs/examples/chart-simple)
+
+---
+
 ### Events
 [Echarts events API](https://ecomfe.github.io/echarts-doc/public/en/api.html#events)
 
@@ -59,6 +67,10 @@ onEvents: {
 ```handlebars
 {{echarts-chart option=option onEvents=onEvents}}
 ```
+
+[Example](https://funnelcloudinc.github.io/ember-cli-echarts/latest/docs/examples/chart-events)
+
+---
 
 ### Loading
 
@@ -90,6 +102,10 @@ onChartReady(chart) {
   showLoading=true
 }}
 ```
+
+[Example](https://funnelcloudinc.github.io/ember-cli-echarts/latest/docs/examples/chart-loading)
+
+---
 
 ### Themes
 
@@ -144,6 +160,10 @@ init() {
 }}
 ```
 
+[Example](https://funnelcloudinc.github.io/ember-cli-echarts/latest/docs/examples/chart-themes)
+
+---
+
 ### Additional Config
 
 [Echarts init API](https://ecomfe.github.io/echarts-doc/public/en/api.html#echarts.init)
@@ -163,6 +183,8 @@ opts: {
   opts=opts
 }}
 ```
+
+---
 
 ### Helper Actions
 Currently there are two helper actions provided:
