@@ -1,12 +1,8 @@
 {
   "name": "ember-cli-echarts",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Ember addon for Baidu's echarts.",
-  "keywords": [
-    "ember-addon",
-    "chart",
-    "echart"
-  ],
+  "keywords": ["ember-addon", "chart", "echart"],
   "license": "MIT",
   "author": "Craig MacKenzie",
   "directories": {
