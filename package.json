@@ -20,7 +20,7 @@
     "test": "ember try:each"
   },
   "dependencies": {
-    "echarts": "^4.0.2",
+    "echarts": "4.1.0",
     "ember-cli-babel": "^6.6.0",
     "ember-cli-node-assets": "^0.2.2"
   },
