@@ -28,7 +28,7 @@ export default Component.extend({
   },
 
   eventContext: computed(function() {
-    return get(this, 'targetObject') || this;
+    return get(this, 'target') || this;
   }),
 
   reRender: on('didInsertElement', observer(
